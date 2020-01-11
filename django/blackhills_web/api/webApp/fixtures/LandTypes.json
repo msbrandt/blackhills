@@ -1,0 +1,50 @@
+[
+	{
+		"model": "webApp.LandTypes",
+		"pk": 1,
+		"fields": {
+			"type_name": "Walking Access",
+			"type_desc": "Normal Walk in access property. Small game only"
+		}
+	},
+	{
+		"model": "webApp.LandTypes",
+		"pk": 2,
+		"fields": {
+			"type_name": "Walking Access - Big Game",
+			"type_desc": "Walk in accees property that includes Big Game"
+		}
+	},
+	{
+		"model": "webApp.LandTypes",
+		"pk": 3,
+		"fields": {
+			"type_name": "Bureau of Land Management (BLM)",
+			"type_desc": ""
+		}
+	},
+	{
+		"model": "webApp.LandTypes",
+		"pk": 4,
+		"fields": {
+			"type_name": "State Land Trust (SLT)",
+			"type_desc": ""
+		}
+	},
+	{
+		"model": "webApp.LandTypes",
+		"pk": 5,
+		"fields": {
+			"type_name": "National Forast",
+			"type_desc": ""
+		}
+	},
+	{
+		"model": "webApp.LandTypes",
+		"pk": 6,
+		"fields": {
+			"type_name": "Wild Life Area",
+			"type_desc": ""
+		}
+	}
+]

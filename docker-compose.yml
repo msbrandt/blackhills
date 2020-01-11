@@ -1,0 +1,34 @@
+version: '2'
+volumes:
+  blackhills-db:
+services:
+  postgres:
+    build:
+      context: ./geo
+    image: blackhills-db
+    container_name: blackhills-db
+    volumes:
+      - blackhills-db:/var/lib/postgresql/data
+      - ./geo/backups:/opt/backups
+    networks:
+      - postgres_conn
+    ports:
+      - '5432:5432'
+    env_file: ./.env
+
+  django:
+    container_name: blackhills-django
+    build:
+      context: ./django
+    image: blackhills-django
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./django/blackhills_web:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+networks:
+  postgres_conn:
+    driver: bridge
